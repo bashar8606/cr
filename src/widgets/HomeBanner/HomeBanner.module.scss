@@ -4,6 +4,7 @@
 .section {
     background-color: #ffffff;
     position: relative;
+    z-index: 11;
     @include lg {
         min-height: 100vh;
     }
@@ -53,8 +54,8 @@
 .line {
     position: absolute;
     left: 50%;
-  top: 110px;
+    top: 90px;
     width: 2px;
-    background-color: red;
-    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    height: 50vh;
 }

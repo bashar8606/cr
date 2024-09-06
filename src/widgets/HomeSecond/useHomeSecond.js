@@ -12,13 +12,25 @@ export const useHomeSecond = ({ style }) => {
     const ctx = gsap.context((self) => {
       const title_sm = self.selector(`.${style.title_sm}`)
       const line = self.selector(`.${style.line}`)
-     
+      const line2 = self.selector(`.${style.line2}`)
+      const line3 = self.selector(`.${style.line3}`)
+
+      gsap.set(line2, { scaleY: 0 }) 
       // gsap.set(title_sm, { autoAlpha: 0, yPercent: 100 })
       gsap.set(line, { scaleX: 0 })
+      gsap.set(line3, { clipPath: `inset(0% 0% 0% 100%)` })
+
+      let tl = gsap.timeline({ force3d: true, scrollTrigger: { trigger: main.current, scrub: 0.5, start:"top 80%", end: "top top",} })
+      tl.to(line2, { scaleY: 1, transformOrigin:"top top",  duration: 1.5},"<")
+   
+
 
         let tl1 = gsap.timeline({ force3d: true, scrollTrigger: { trigger: main.current, scrub: 0.5, end: "100%", pin: true } })
-
         tl1.to(line, { scaleX: 1, ease: Expo.easeOut,transformOrigin:"left", duration: 1.5},"<")
+
+        tl1.to(line3, { clipPath: `inset(0% 0% 0% 50%)`, duration: 3})
+        // let tl3 = gsap.timeline({ force3d: true, scrollTrigger: { trigger: main.current, scrub: 0.5, start:" top bottom", markers: true} })
+    
 
       ScrollTrigger.matchMedia({
         "(min-width: 992px)": function () {

@@ -15,6 +15,29 @@
 }
 
 
+.line2 {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: 2px;
+    background-color: rgb(255, 255, 255);
+    height: 45vh;
+}
+
+
+
+.line3 {
+    width: 102vh;
+    bottom: 0;
+    transform: translateX(-56%) rotate(-61deg);
+    left: 50%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    clip-path: inset(0% 0% 0% 100%);
+    will-change: clip-path;
+}
+
 
 
 .logo_wrap {

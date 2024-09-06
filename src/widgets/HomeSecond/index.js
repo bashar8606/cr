@@ -12,6 +12,8 @@ const HomeSecond = ({ data }) => {
       className={`${style.section} d-flex align-items-center overflow-hidden flex-column pb-5 pb-lg-4 pt-3 pt-lg-3`}
       ref={main}
     >
+      <span className={style.line2}> </span>
+      <span className={style.line3}> </span>
       <div className={style.content_wrap}>
         <h3
           className={`${style.title_sm}  text-white`}

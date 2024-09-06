@@ -2,8 +2,9 @@
 
 
 .section {
-    background-color: #ffffff;
+    background-color: #000000;
     position: relative;
+    overflow: hidden;
     @include lg {
         min-height: 100vh;
     }
@@ -14,6 +15,16 @@
  }
 }
 
+
+.line2 {
+    width: 102vh;
+    top: 0;
+    transform: translateX(-56%) rotate(-61deg);
+    left: 50%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+}
 
 
 
@@ -47,6 +58,7 @@
 .title_sm {
     font-size: 70px;
     // opacity: 0;
+    color: #fff;
     will-change: transform, opacity;
 
 
@@ -56,7 +68,7 @@
     position: absolute;
     left: 0;
     height: 1px;
-    background-color: #000000;
+    background-color: #ffffff;
     will-change: transform;
     width: 100%;
     top: -10px;

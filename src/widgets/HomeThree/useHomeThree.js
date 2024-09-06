@@ -18,6 +18,7 @@ export const useHomeThree = ({ style }) => {
       const think = self.selector(`.${style.think}`);
       const title_thir = self.selector(`.${style.title_thir}`);
       const strip = self.selector(`.${style.strip}`);
+      const line2 = self.selector(`.${style.line2}`);
 
       gsap.set(title_thir, { autoAlpha: 0, yPercent: 100 });
       gsap.set(title_span, { autoAlpha: 0, yPercent: 100 });
@@ -25,6 +26,12 @@ export const useHomeThree = ({ style }) => {
       gsap.set(re, { clipPath: `inset(0% 100% 0% 0%)` });
       gsap.set(think, { x: -70 });
       gsap.set(strip, { height: "1px", scaleX: 0 });
+
+
+      gsap.set(line2, { clipPath: `inset(0% 0% 0% 50%)` })
+
+      let tl = gsap.timeline({ force3d: true, scrollTrigger: { trigger: main.current, scrub: 0.5, start:"top 80%", end: "top top",} })
+      tl.to(line2, {clipPath: `inset(0% 0% 0% 0.8%)`,  duration: 1.5},"<")
 
       let tl1 = gsap.timeline({
         force3d: true,
@@ -38,7 +45,12 @@ export const useHomeThree = ({ style }) => {
 
       tl1.to(
         line,
-        { scaleX: 1, ease: Expo.easeOut, transformOrigin: "left", duration: 3 },
+        { scaleX: 1, ease: Expo.easeOut, transformOrigin: "left", duration: 6 },
+        "<"
+      );
+      tl1.to(
+        main.current,
+        { backgroundColor: "#fff", ease: Expo.easeOut,  duration: 6 },
         "<"
       );
       tl1.to(
@@ -49,9 +61,7 @@ export const useHomeThree = ({ style }) => {
           autoAlpha: 0,
           ease: Expo.easeOut,
           duration: 3,
-        },
-        "<.6"
-      );
+        });
       tl1.to(
         title_span[0],
         { yPercent: 0, autoAlpha: 1, ease: Expo.easeOut, duration: 3 },

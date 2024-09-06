@@ -62,7 +62,7 @@ const HomeBanner = ({ data }) => {
         >
           We are not another 360 agency
         </h3>
-		<span className={style.line}> </span>
+		    <span className={style.line}> </span>
       </div>
     </section>
   );

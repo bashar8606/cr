@@ -12,8 +12,9 @@ const HomeThree = ({ data }) => {
       className={`${style.section} d-flex align-items-center flex-column pb-5 pb-lg-4 pt-3 pt-lg-3`}
       ref={main}
     >
+      <div className={`${style.line2}`}></div>
       <div className={style.content_wrap}>
-        <h3 className={`${style.title_sm}  text-black`}>
+        <h3 className={`${style.title_sm}  `}>
           <span className="d-inline-block position-relative">
             that will
             <span className={style.line}></span>
