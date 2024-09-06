@@ -4,8 +4,10 @@
 .section {
     background-color: #ffffff;
     position: relative;
+    min-height: 100vh;
+
     @include lg {
-        min-height: 100vh;
+       
     }
 
 }
@@ -20,26 +22,44 @@
     transform: translateY(-50%);
 }
 
+.btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200%;
+}
+
 
 
 .strip {
     height: 50vh;
-    width: 100px;
+    width: 30px;
     background-color: #000000;
     transform: translateX(-50%);
     top: 0%;
     will-change: transform;
+    @include lg {
+        width: 100px;
+    }
 }
 
 
 .title_sm {
-    font-size: 56px;
+    font-size: 22px;
     max-width: 740px;
     white-space: nowrap;
     overflow: hidden;
     margin: auto;
+    @include lg {
+    font-size: 56px;
+       
+    }
 }
 
 .track {
     will-change: transform;
+}
+
+.word {
+    clip-path: inset(0% 100% 0% 0%);
 }

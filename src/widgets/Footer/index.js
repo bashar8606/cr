@@ -1,26 +1,34 @@
-import Link from 'next/link';
-import style from "./Footer.module.scss"
-import { IoCallOutline, IoMailOutline } from "react-icons/io5";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import Link from "next/link";
+import style from "./Footer.module.scss";
+import { LuShare2 } from "react-icons/lu";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 function Footer() {
-    return (
-        <footer className={`${style.footer} bg-white`}>
-
-    
-
-            <div className={style.footer_credit}>
-                <div className="container">
-                    <div className="row ff-secondary">
-                        <div className="col-lg">
-                            <p className='mb-lg-0 fw-500 text-black'>Copyright © 2024 Edunest all rights reserved</p>
-                        </div>
-                      
-                    </div>
-                </div>
+  return (
+    <footer className={`${style.footer} bg-white`}>
+      <div className={style.footer_credit}>
+        <div className="container">
+          <div className="row ff-secondary  align-items-center">
+            <div className="col-lg-auto">
+              <button className={`${style.btn2} bg-transparent border-0 `}>
+                <RiArrowDownSLine />
+              </button>
             </div>
-        </footer>
-    );
+            <div className="col-lg">
+              <p className="mb-lg-0 text-center fw-600 text-black opacity-50">
+                2024 © Creo Global. All Rights Reserved
+              </p>
+            </div>
+            <div className="col-lg-auto">
+              <button className={`${style.btn} bg-transparent border-0 `}>
+                <LuShare2 />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

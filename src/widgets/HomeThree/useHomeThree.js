@@ -61,10 +61,14 @@ export const useHomeThree = ({ style }) => {
           autoAlpha: 0,
           ease: Expo.easeOut,
           duration: 3,
-        });
+        },"<.1");
       tl1.to(
         title_span[0],
         { yPercent: 0, autoAlpha: 1, ease: Expo.easeOut, duration: 3 },
+        "<"
+      );
+      tl1.to(line2,
+        { autoAlpha: 0, ease: Expo.easeOut, duration: 0.1 },
         "<"
       );
       tl1.to(re, {

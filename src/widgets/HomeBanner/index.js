@@ -12,7 +12,7 @@ const HomeBanner = ({ data }) => {
 
   return (
     <section
-      className={`${style.section} d-flex align-items-center  flex-column pb-5 pb-lg-4 pt-3 pt-lg-3`}
+      className={`${style.section} overflow-hidden d-flex align-items-center  flex-column pb-5 pb-lg-4 pt-3 pt-lg-3`}
       ref={main}
     >
       <div className={`position-absolute w-100 ${style.logo_wrap}`}>

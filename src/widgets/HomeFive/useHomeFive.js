@@ -11,7 +11,12 @@ export const useHomeFive = ({ style }) => {
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       const track = self.selector(`.${style.track}`);
+      const strip = self.selector(`.${style.strip}`);
+      const word = self.selector(`.${style.word}`);
+      const btn = self.selector(`.${style.btn}`);
 
+      gsap.set(word, { clipPath:`inset(0% 100% 0% 0%)` });
+      gsap.set(btn, { yPercent: 100, autoAlpha: 0 });
 
       let tl1 = gsap.timeline({
         force3d: true,
@@ -28,6 +33,20 @@ export const useHomeFive = ({ style }) => {
         { xPercent: -60, ease: Expo.easeOut, duration: 3 },
         "<"
       );
+      tl1.to(
+        word,
+        { clipPath:`inset(0% 0% 0% 0%)`,ease: "steps(12)", duration: 3 }
+      );
+      tl1.to(
+        strip,
+        { yPercent: -100, ease: Expo.easeOut, duration: 3 },
+        "<"
+      );
+      tl1.to(
+        btn,
+        { yPercent: 0,autoAlpha: 1, ease: Expo.easeOut, duration: 2 }
+      );
+      // inset(0% 100% 0% 0%)
       // tl1.to(
       //   title_sm,
       //   {

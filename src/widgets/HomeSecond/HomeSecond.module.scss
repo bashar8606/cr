@@ -4,10 +4,8 @@
 .section {
     position: relative;
     background-color: #000;
-    @include lg {
-        min-height: 100vh;
-    }
-
+    min-height: 100vh;
+  
  .letter, .letter_line {
     will-change: transform;
     opacity: 0;
@@ -49,7 +47,10 @@
 }
 
 .title {
-    font-size: 120px;
+    font-size: 60px;
+    @include lg {
+        font-size: 120px;
+    }
     span {
         opacity: 0;
         will-change: transform, opacity;
@@ -68,9 +69,12 @@
 }
 
 .title_sm {
-    font-size: 70px;
+    font-size: 30px;
     // opacity: 0;
     will-change: transform, opacity;
+    @include lg {
+        font-size: 70px;
+    }
 
 
 }
