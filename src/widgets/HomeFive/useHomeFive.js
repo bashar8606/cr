@@ -46,55 +46,7 @@ export const useHomeFive = ({ style }) => {
         btn,
         { yPercent: 0,autoAlpha: 1, ease: Expo.easeOut, duration: 2 }
       );
-      // inset(0% 100% 0% 0%)
-      // tl1.to(
-      //   title_sm,
-      //   {
-      //     yPercent: -150,
-      //     scale: 0.95,
-      //     autoAlpha: 0,
-      //     ease: Expo.easeOut,
-      //     duration: 3,
-      //   },
-      //   "<.6"
-      // );
-      // tl1.to(
-      //   title_span[0],
-      //   { yPercent: 0, autoAlpha: 1, ease: Expo.easeOut, duration: 3 },
-      //   "<"
-      // );
-      // tl1.to(re, {
-      //   clipPath: `inset(0% 0% 0% 0%)`,
-      //   ease: Expo.easeOut,
-      //   duration: 2,
-      // });
-      // tl1.to(think, { x: 0, ease: Expo.easeOut, duration: 2 }, "<");
-      // tl1.to(title_span[0], {
-      //   yPercent: -150,
-      //   autoAlpha: 0,
-      //   ease: Expo.easeOut,
-      //   duration: 3,
-      // });
-
-      // tl1.to(
-      //   title_span[1],
-      //   { yPercent: -100, autoAlpha: 1, ease: Expo.easeOut, duration: 3 },
-      //   "<"
-      // );
-      // tl1.to(title_sec, {
-      //   yPercent: -100,
-      //   scale: 0.6,
-      //   autoAlpha: 1,
-      //   ease: Expo.easeOut,
-      //   duration: 3,
-      // });
-      // tl1.to(
-      //   title_thir,
-      //   { yPercent: 0, autoAlpha: 1, ease: Expo.easeOut, duration: 3 },
-      //   "<"
-      // );
-      // tl1.to(strip, { scaleX: 1, ease: Expo.easeOut, duration: 3 }, "<.8");
-      // tl1.to(strip, { height: "50vh", ease: Expo.easeOut, duration: 3 });
+     
 
       ScrollTrigger.matchMedia({
         "(min-width: 992px)": function () {},
