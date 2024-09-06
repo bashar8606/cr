@@ -1,0 +1,45 @@
+@import '../../style/variable.scss';
+
+
+.section {
+    background-color: #ffffff;
+    position: relative;
+    @include lg {
+        min-height: 100vh;
+    }
+
+}
+
+
+.content_wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+
+
+.strip {
+    height: 50vh;
+    width: 100px;
+    background-color: #000000;
+    transform: translateX(-50%);
+    top: 0%;
+    will-change: transform;
+}
+
+
+.title_sm {
+    font-size: 56px;
+    max-width: 740px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+}
+
+.track {
+    will-change: transform;
+}

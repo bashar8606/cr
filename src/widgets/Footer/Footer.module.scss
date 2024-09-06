@@ -1,0 +1,107 @@
+@import '../../style/variable.scss';
+
+.footer {
+    address {
+        color: #DADADA;
+        letter-spacing: 0.18px;
+    }
+
+
+    .social {
+        a {
+            color: #fff;
+            transition: 0.2s all ease-in;
+            opacity: 0.7;
+            @include lg {
+                font-size: size(24);
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    :global(.input-group) {
+        max-width: 500px;
+
+        input {
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.502);
+            }
+        }
+    }
+
+
+
+    &_credit {
+        border-top: 1px solid #252525;
+        padding: 15px 0;
+
+        @include lg {
+            padding: size(30) 0;
+        }
+
+        p {
+            color: #DADADA;
+            line-height: 1;
+            font-size: 13px;
+
+            @include lg {
+                font-size: size(15);
+            }
+
+            a {
+                color: #DADADA;
+                transition: 0.3s all ease;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .title {
+        font-size: 16px;
+
+        @include lg {
+            font-size: size(20);
+        }
+    }
+
+    .nav {
+        &_link {
+            color: #a4a4a4;
+            font-size: 14px;
+            transition: 0.3s all ease;
+            display: block;
+            padding: 5px 0;
+
+            @include lg {
+                font-size: 1rem;
+                padding: size(5) 0;
+            }
+
+            span {
+                font-size: 17px;
+                margin-right: 10px;
+
+                @include lg {
+                    margin-right: size(20);
+                    font-size: size(28);
+                }
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &_nav {
+        ul {
+            list-style: none;
+
+        }
+    }
+}

@@ -1,0 +1,210 @@
+// Light theme color variables
+@import "~bootstrap/scss/mixins/breakpoints";
+
+
+$primary: #884AFF;
+$secondary: #1C1729;
+$light: #B6B6B6;
+$lightblue: #F1F1F1;
+$grey: #707070;
+$white: #FFF;
+$bgprimary: #F4F2F1;
+$danger-500: #d54848;
+$blue: #4267B2;
+$success: #00BB1E;
+
+// Convert to rem
+$base-size: 18;
+
+@function size($target, $context: $base-size) {
+  @return calc($target / $context) * 1rem;
+}
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "light": $light,
+    "lightblue": $lightblue,
+    "grey": $grey,
+    "white": $white,
+    "success": $success,
+    "danger":#ce0d13,
+    "warning": #ffa600,
+);
+
+
+$gutters: (
+  0: 0,
+  1: 10px,
+  2: 20px,
+  3: 30px,
+  4: 40px,
+  5: 3rem,
+);
+
+// Media query breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1360px,
+  xxl: 1570px
+);
+
+// scss-docs-start border-radius-variables
+$border-radius: 3px !default;
+$border-radius-sm: 2px !default;
+$border-radius-lg: 4px !default;
+$border-radius-xl: 6px !default;
+// $border-radius-2xl:           2rem !default;
+// $border-radius-pill:          50rem !default;
+// scss-docs-end border-radius-variables
+
+
+$primary-line-height: 1.67;
+$secondary-line-height: 1.42;
+$title-line-height: 1.25;
+$title-line-height2: 1.76;
+$sub-title-line-height: 1.48;
+$big-title-line-height: 1.17;
+
+
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+
+
+$font-size-spl-1: size(120);
+$font-size-spl-2: size(100);
+$font-size-spl-3: size(50);
+$font-size-spl-4: size(46);
+
+
+
+$font-size-1: size(80);
+$font-size-2: size(40);
+$font-size-3: size(32);
+$font-size-4: size(30);
+$font-size-5: size(28);
+$font-size-6: size(24);
+$font-size-7: size(18);
+$font-size-8: size(16);
+$font-size-9: size(14);
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $font-size-1,
+  2: $font-size-2,
+  3: $font-size-3,
+  4: $font-size-4,
+  5: $font-size-5,
+  6: $font-size-6,
+  7: $font-size-7,
+  8: $font-size-8,
+  9: $font-size-9,
+  1sp : $font-size-spl-1,
+  2sp : $font-size-spl-2,
+  3sp : $font-size-spl-3,
+  4sp : $font-size-spl-4,
+  ) !default;
+// scss-docs-end font-sizes
+
+
+$display-font-sizes: (
+);
+
+// scss-docs-start theme-colors-map
+// $theme-colors: (
+//   "primary": $primary,
+//   ) !default;
+// scss-docs-end theme-colors-map
+
+
+$aspect-ratios: (
+  "1": 100%,
+  "16x9": calc(9 / 16 * 100%)
+);
+
+@mixin min($breakpoint, $property: width) {
+  @media screen and (min-#{$property}: #{$breakpoint}px) {
+    @content;
+  }
+}
+
+@mixin max($breakpoint, $property: width) {
+  @media screen and (max-#{$property}: #{$breakpoint}px) {
+    @content;
+  }
+}
+
+@mixin min-max($bp-min, $bp-max, $prop-min: width, $prop-max: $prop-min) {
+  @media screen and (min-#{$prop-min}: #{$bp-min}px) and (max-#{$prop-max}: #{$bp-max}px) {
+    @content;
+  }
+}
+
+
+// Small devices
+@mixin sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+
+
+%backface {
+  -webkit-backface-visibility: hidden; 
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+   transform: translateZ(0);
+}
+
+%noscroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

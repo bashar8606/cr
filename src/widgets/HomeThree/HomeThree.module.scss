@@ -1,0 +1,105 @@
+@import '../../style/variable.scss';
+
+
+.section {
+    background-color: #ffffff;
+    position: relative;
+    @include lg {
+        min-height: 100vh;
+    }
+
+ .letter, .letter_line {
+    will-change: transform;
+    opacity: 0;
+ }
+}
+
+
+
+
+.logo_wrap {
+    max-width: 75%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+}
+
+.title {
+    font-size: 120px;
+    span {
+        opacity: 0;
+        will-change: transform, opacity;
+        margin-right: 25px;
+        display: inline-block;
+    }
+}
+
+.content_wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.title_sm {
+    font-size: 70px;
+    // opacity: 0;
+    will-change: transform, opacity;
+
+
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    height: 1px;
+    background-color: #000000;
+    will-change: transform;
+    width: 100%;
+    top: -10px;
+}
+.title_sec {
+    position: absolute;
+    left: 0;width: 100%;
+    top: 0;
+    font-size: 70px;
+    height: 70px;
+    line-height: 1;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.title_thir {
+    position: absolute;
+    left: 0;width: 100%;
+    top: 0;
+    font-size: 70px;
+    overflow: hidden;
+    will-change: transform;
+}
+
+
+
+.re {
+    will-change: transform;
+}
+.think {
+    will-change: transform;
+    display: inline-block;
+}
+
+.word {
+    will-change: transform;
+}
+
+.strip {
+    height: 50vh;
+    width: 100px;
+    background-color: #000000;
+    transform: translateX(-50%);
+    top: 100%;
+    will-change: transform;
+}

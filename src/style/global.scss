@@ -1,0 +1,428 @@
+@import "variable.scss";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+$enable-dark-mode: false;
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/card";
+@import "~bootstrap/scss/accordion";
+// @import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+// @import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+// @import "~bootstrap/scss/tooltip";
+// @import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas";
+// @import "~bootstrap/scss/placeholders";
+
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+
+html {
+    font-size: 16px;
+
+    @include xxl {
+        font-size: 18px;
+    }
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+
+
+// @media (-webkit-min-device-pixel-ratio: 1.25) {
+//     html {
+//         font-size: 16px;
+//     }
+//   }
+
+
+body {
+
+    font-family: var(--ff-primary);
+    --header-height: 62px;
+
+    @media (-webkit-min-device-pixel-ratio: 1.1) {}
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    @include lg {
+        --header-height: 83px;
+    }
+
+
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f3f3f3;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #000;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #000;
+    }
+
+}
+
+
+html.lenis {
+    @include lg {
+      height: auto;
+    }
+  }
+  
+  .lenis.lenis-smooth {
+    @include lg {
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    @include lg {
+      overscroll-behavior: contain;
+    }
+  }
+  
+  .lenis.lenis-stopped {
+    @include lg {
+      overflow: hidden;
+    }
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    @include lg {
+      pointer-events: none;
+  
+      ::-moz-selection {
+        /* Code for Firefox */
+        color: #fff;
+        background: #000;
+      }
+  
+      ::selection {
+        /* Code for Firefox */
+        color: #fff;
+        background: #000;
+      }
+    }
+  }
+.ff-primary {
+    font-family: var(--ff-primary) !important;
+}
+
+
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: var(--btn-color);
+    }
+}
+
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.stretched-link {
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        content: "";
+    }
+}
+
+.ratio-1x1 {
+    --bs-aspect-ratio: 100%;
+}
+
+.ratio-16x9 {
+    --bs-aspect-ratio: calc(9 / 16 * 100%);
+
+}
+
+.ratio-4x3 {
+    --bs-aspect-ratio: calc(3 / 4 * 100%);
+
+}
+
+.ratio-21x9 {
+    --bs-aspect-ratio: calc(9 / 21 * 100%);
+
+}
+
+
+
+.h1 {
+    font-size: 32px;
+    line-height: 1.3;
+
+    @include lg {
+        font-size: size(90);
+    }
+}
+
+.h2 {
+    font-size: 24px;
+    line-height: 1.4;
+
+    @include lg {
+        font-size: size(42);
+    }
+    @include xl {
+        font-size: 2.8rem;
+    }
+
+    @include xxl {
+        font-size: size(60);
+    }
+}
+
+.h3 {
+    font-size: 22px;
+    @include lg {
+        font-size: 1.6rem;
+    }
+    @include xl {
+        font-size: size(40);
+    }
+}
+
+.h4 {
+    font-size: 20px;
+
+    @include lg {
+        font-size: size(24);
+    }
+}
+
+.h5 {
+    font-size: 18px;
+
+    @include lg {
+        font-size: size(22);
+    }
+}
+
+.h6 {
+    font-size: 14px;
+
+    @include lg {
+        font-size: size(16);
+    }
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+.fw-300 {
+    font-weight: 300 !important;
+}
+.sec-padding {
+    padding: 50px 0;
+
+    @include lg {
+        padding: size(50) 0;
+    }
+
+    @include xl {
+        padding: size(64) 0;
+    }
+}
+
+.btn {
+    --bs-btn-padding-x: #{size(28)};
+    --bs-btn-padding-y: #{size(11)};
+    --bs-btn-font-size: 16px;
+    --bs-btn-font-weight: 400;
+    --bs-btn-border-radius: 11px;
+    transform: initial;
+    transition: 0.3s all ease;
+    will-change: transform;
+
+    &:active {
+        transform: scale(0.95);
+    }
+    &:hover {
+        transform: scale(1.05);
+    }
+    &-lg {
+        --bs-btn-font-size: #{size(24)};
+        
+    }
+
+    &-sm {
+        --bs-btn-padding-y: 9px;
+    }
+}
+
+
+
+.title {
+
+    &-sm {
+        font-size: 12px;
+
+        @include lg {
+            font-size: size(14);
+
+        }
+    }
+
+    &-md {
+        font-size: 14px;
+
+        @include lg {
+            font-size: size(16);
+        }
+    }
+
+    &-xs {
+        font-size: 10px;
+
+        @include lg {
+            font-size: size(12);
+        }
+    }
+}
+
+
+
+.dynamic-content {
+    ul {
+        li {
+            --size: 5px;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 18px;
+            font-size: 14px;
+            @include lg {
+                --size: 8px;
+                font-size: size(16);
+                padding-left: size(22);
+                margin-bottom: 10px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: 0;
+                background-color: $primary;
+                display: block;
+                width: var(--size);
+                height: var(--size);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.modal {
+    --bs-modal-border-width: 0;
+    --bs-modal-bg: transparent;
+    &-backdrop {
+        --bs-backdrop-bg: rgb(0 0 0 / 23%);
+        --bs-backdrop-opacity: 1;
+        backdrop-filter: blur(9px);
+    }
+  
+}
+
+
+.form-floating > label {
+    padding: 0.8rem 0.75rem;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select {
+    height: calc(3rem + calc(var(--bs-border-width) * 2));
+    min-height: calc(3rem + calc(var(--bs-border-width) * 2));
+    line-height: 1.25;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text-transparent {
+    color: transparent !important;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
+
+.form-floating > .form-control:focus ~ label::after, .form-floating > .form-control:not(:placeholder-shown) ~ label::after, .form-floating > .form-control-plaintext ~ label::after, .form-floating > .form-select ~ label::after {
+    background-color: transparent;
+}

@@ -1,0 +1,66 @@
+@import '../../style/variable.scss';
+
+.select {
+    display: block;
+
+    &.no_border {
+        :global {
+            .custom {
+                &__control {
+                    border-color: transparent;
+                    background-color: transparent;
+                    &--is-focused {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    :global {
+        .custom {
+            &__control {
+                border-color: rgb(227 227 227);
+                border-radius: 0px;
+            }
+
+            &__placeholder {
+                color: #707070;
+            }
+
+            &__value-container {
+                font-size: 14px;
+                font-weight: 500;
+
+                @include lg {
+                    font-size: 1rem;
+                }
+            }
+
+            &__input {
+                &-container {}
+            }
+
+            &__indicators {}
+
+            &__indicator {
+                &-separator {
+                    display: none;
+                }
+            }
+
+            &__menu {
+                &-list {}
+            }
+
+            &__option {
+                color: #959595;
+                &--is-selected {
+                    background-color: #ffffff;
+                    color: hsl(0deg 0% 0%);
+                }
+                &--is-focused{}
+            }
+        }
+    }
+}

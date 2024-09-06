@@ -1,0 +1,63 @@
+@import '../../style/variable.scss';
+
+
+.section {
+    background-color: #ffffff;
+    position: relative;
+    @include lg {
+        min-height: 100vh;
+    }
+
+}
+
+
+.content_wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+
+
+.strip {
+    height: 100vh;
+    width: 100px;
+    background-color: #000000;
+    transform: translateX(-50%);
+    top: 0%;
+    will-change: transform;
+}
+.title_sm {
+    background-color: #fff;
+    display: inline-block;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 25px;
+    transform: rotate(90deg);
+    &_one {
+        will-change: transform;
+        display: block;
+        font-size: 81px;
+        line-height: 1;
+        background-color: #fff;
+    }
+    &_two {
+        will-change: transform;
+        background-color: #fff;
+        display: block;
+        font-size: 70px;
+    }
+}
+.label {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-90deg);
+    left: -11%;
+    top: 36%;
+    font-size: 34px;
+    letter-spacing: -1px;
+    font-weight: 600;
+}
