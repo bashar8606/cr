@@ -2,15 +2,11 @@ import strapiFetch from "@/utils/strapiFetch";
 
 const options = {
     method: 'GET',
-    // headers: {
-    //     accept: 'application/json',
-    //     Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`
-    // },
+    cache: 'no-store', 
     next: {
-        revalidate: 60 * 60 * 24, // data will be cached for 1 day
+        revalidate: 0, 
     }
 };
-
 
 export async function getHomeData() {
     const url = `pages/6`;
