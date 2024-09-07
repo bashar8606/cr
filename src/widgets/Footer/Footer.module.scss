@@ -32,11 +32,17 @@
   
 
     .btn {
-        font-size: 30px;
+        font-size: 22px;
         color: #727272;
+        @include lg {
+            font-size: 30px;
+        }
     }
     .btn2 {
-        font-size: 45px;
+        font-size: 30px;
         color: #727272;
+        @include lg {
+            font-size: 45px;
+        }
     }
 }

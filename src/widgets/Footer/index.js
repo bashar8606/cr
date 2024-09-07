@@ -9,17 +9,17 @@ function Footer() {
       <div className={style.footer_credit}>
         <div className="container">
           <div className="row ff-secondary  align-items-center">
-            <div className="col-lg-auto">
+            <div className="col-auto">
               <button className={`${style.btn2} bg-transparent border-0 `}>
                 <RiArrowDownSLine />
               </button>
             </div>
-            <div className="col-lg">
-              <p className="mb-lg-0 text-center fw-600 text-black opacity-50">
+            <div className="col">
+              <p className="mb-0 text-center fw-600 text-black opacity-50">
                 2024 © Creo Global. All Rights Reserved
               </p>
             </div>
-            <div className="col-lg-auto">
+            <div className="col-auto">
               <button className={`${style.btn} bg-transparent border-0 `}>
                 <LuShare2 />
               </button>
