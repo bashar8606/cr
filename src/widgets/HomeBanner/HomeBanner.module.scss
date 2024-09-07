@@ -61,8 +61,12 @@
 .line {
     position: absolute;
     left: 50%;
-    top: 90px;
+    top: 154px;
     width: 2px;
     background-color: rgb(255, 255, 255);
     height: 50vh;
+    @include lg {
+        top: 90px;
+
+    }
 }

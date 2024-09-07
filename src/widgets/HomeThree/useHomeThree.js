@@ -20,11 +20,12 @@ export const useHomeThree = ({ style }) => {
       const strip = self.selector(`.${style.strip}`);
       const line2 = self.selector(`.${style.line2}`);
 
+
       gsap.set(title_thir, { autoAlpha: 0, yPercent: 100 });
       gsap.set(title_span, { autoAlpha: 0, yPercent: 100 });
       gsap.set(line, { scaleX: 0 });
       gsap.set(re, { clipPath: `inset(0% 100% 0% 0%)` });
-      gsap.set(think, { x: -70 });
+      gsap.set(think, { x: width>=992?-70:-35 });
       gsap.set(strip, { height: "1px", scaleX: 0 });
 
 
@@ -74,9 +75,9 @@ export const useHomeThree = ({ style }) => {
       tl1.to(re, {
         clipPath: `inset(0% 0% 0% 0%)`,
         ease: Expo.easeOut,
-        duration: 2,
+        duration: 3,
       });
-      tl1.to(think, { x: 0, ease: Expo.easeOut, duration: 2 }, "<");
+      tl1.to(think, { x: 0, ease: Expo.easeOut, duration: 3 }, "<");
       tl1.to(title_span[0], {
         yPercent: -150,
         autoAlpha: 0,
