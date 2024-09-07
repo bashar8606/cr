@@ -16,9 +16,9 @@ const HomeFour = ({ data }) => {
 <div className={`position-absolute start-50 ${style.strip}`}></div>
       <div className={style.content_wrap}>
         <h3 className={`${style.title_sm} position-relative text-black`}>
-          <div className={style.label}>Leads to</div>
-          <span className={style.title_sm_one}> Growth</span>
-          <span className={style.title_sm_two}> Thinking</span>
+          <div className={style.label}>{data?.word4[0]?.title}</div>
+          <span className={style.title_sm_one}> {data?.word4[1]?.title}</span>
+          <span className={style.title_sm_two}> {data?.word4[2]?.title}</span>
         </h3>
       </div>
     </section>

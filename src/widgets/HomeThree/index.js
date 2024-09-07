@@ -16,17 +16,17 @@ const HomeThree = ({ data }) => {
       <div className={style.content_wrap}>
         <h3 className={`${style.title_sm}  `}>
           <span className="d-inline-block position-relative">
-            that will
+            {data?.titlesthird[0]?.title}
             <span className={style.line}></span>
           </span>{" "}
-          challenge you
+          {data?.titlesthird[1]?.title}
         </h3>
 
         <h3 className={`${style.title_sec}  text-black`}>
-          <span  className={`${style.word} d-block`}>To <span className={style.re}>re</span><span className={style.think}>think</span></span>
-          <span className={`${style.word} d-block`}>Because</span>
+          <span  className={`${style.word} d-block`}>{data?.word2[0]?.title} <span className={style.re}>{data?.word2[1]?.title}</span><span className={style.think}>{data?.word2[2]?.title}</span></span>
+          <span className={`${style.word} d-block`}>{data?.word3[0]?.title}</span>
         </h3>
-        <h3 className={`text-black ${style.title_thir}`}>Assimilating</h3>
+        <h3 className={`text-black ${style.title_thir}`}>{data?.word3[1]?.title}</h3>
         <div className={`position-absolute start-50 ${style.strip}`}></div>
       </div>
     </section>
@@ -34,3 +34,4 @@ const HomeThree = ({ data }) => {
 };
 
 export default HomeThree;
+ 

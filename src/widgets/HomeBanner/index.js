@@ -7,7 +7,7 @@ import { useHomeBanner } from "./useHomeBanner";
 const HomeBanner = ({ data }) => {
   const { main, width } = useHomeBanner({ style });
 
-  const text = "WHAT IS CREO?";
+  const text = data?.title_main;
   const words = text && text.split(" ");
 
   return (
@@ -60,7 +60,7 @@ const HomeBanner = ({ data }) => {
         <h3
           className={`${style.title_sm} position-absolute start-0 w-100 top-0 text-white`}
         >
-          We are not another 360 agency
+          {data?.titlemainsecond}
         </h3>
 		    <span className={style.line}> </span>
       </div>

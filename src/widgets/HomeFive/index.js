@@ -17,9 +17,9 @@ const HomeFive = ({ data }) => {
         >
           <div className={`${style.track}`}>
             {" "}
-            Growth requires Rethinking{" "}
+            {data?.word5[0]?.title}{" "}
             <span className={`d-inline-block ${style.word}`}>
-              requires CREO
+             {data?.word5[1]?.title}
             </span>
           </div>
         </h3>

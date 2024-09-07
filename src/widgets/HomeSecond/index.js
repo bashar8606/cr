@@ -18,7 +18,7 @@ const HomeSecond = ({ data }) => {
         <h3
           className={`${style.title_sm}  text-white`}
         >
-          But rather <span className="d-inline-block position-relative">a mindset
+         {data?.titles[0]?.title} <span className="d-inline-block position-relative"> {data?.titles[1]?.title}
 
             <span className={style.line}></span>
           </span>
