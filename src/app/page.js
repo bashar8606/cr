@@ -10,7 +10,7 @@ export default async function Home() {
   const acfData = data?.acf
   
   return (
-    <main>
+    <main className="bg-black">
       <div className="bg position-absolute top-0 w-100 start-0 h-full"></div>
       <HomeBanner data={acfData} />
       <HomeSecond data={acfData}  />
