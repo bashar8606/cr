@@ -16,13 +16,18 @@
 
 
 .line2 {
-    width: 102vh;
+ 
+    width: 85vh;
     top: 0;
-    transform: translateX(-56%) rotate(-61deg);
+    transform: translateX(-50%) rotate(-90deg);
     left: 50%;
     height: 2px;
     background-color: rgb(255, 255, 255);
     position: absolute;
+    @include lg {
+        width: 102vh;
+        transform: translateX(-56%) rotate(-61deg);
+    }
 }
 
 

@@ -15,7 +15,7 @@ export const useHomeFive = ({ style }) => {
       const word = self.selector(`.${style.word}`);
       const btn = self.selector(`.${style.btn}`);
 
-      gsap.set(word, { clipPath:`inset(0% 100% 0% 0%)` });
+      gsap.set(word, { autoAlpha: 0});
       gsap.set(btn, { yPercent: 100, autoAlpha: 0 });
 
       let tl1 = gsap.timeline({
@@ -35,12 +35,12 @@ export const useHomeFive = ({ style }) => {
       );
       tl1.to(
         word,
-        { clipPath:`inset(0% 0% 0% 0%)`,ease: "steps(12)", duration: 3 }
+        { autoAlpha: 1,stagger:1,ease: "steps(1)", duration: 2 }
       );
       tl1.to(
         strip,
-        { yPercent: -100, ease: Expo.easeOut, duration: 3 },
-        "<"
+        { yPercent: -100, ease: Expo.easeOut, duration: 6 },
+        "<.9"
       );
       tl1.to(
         btn,

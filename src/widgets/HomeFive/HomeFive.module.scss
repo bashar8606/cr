@@ -33,7 +33,7 @@
 
 .strip {
     height: 50vh;
-    width: 30px;
+    width: 40px;
     background-color: #000000;
     transform: translateX(-50%);
     top: 0%;
@@ -46,13 +46,14 @@
 
 .title_sm {
     font-size: 22px;
-    max-width: 740px;
+    max-width: 295px;
+    
     white-space: nowrap;
     overflow: hidden;
     margin: auto;
     @include lg {
     font-size: 56px;
-       
+    max-width: 740px;
     }
 }
 
@@ -61,5 +62,5 @@
 }
 
 .word {
-    clip-path: inset(0% 100% 0% 0%);
+    // clip-path: inset(0% 100% 0% 0%);
 }

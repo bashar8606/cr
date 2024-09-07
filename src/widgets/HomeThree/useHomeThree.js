@@ -31,7 +31,7 @@ export const useHomeThree = ({ style }) => {
 
       gsap.set(line2, { clipPath: `inset(0% 0% 0% 50%)` })
 
-      let tl = gsap.timeline({ force3d: true, scrollTrigger: { trigger: main.current, scrub: 0.5, start:"top 80%", end: "top top",} })
+      let tl = gsap.timeline({ force3d: true, scrollTrigger: { trigger: main.current, scrub: 0.5, start:"top 100%", end: "top top",} })
       tl.to(line2, {clipPath: `inset(0% 0% 0% 0.8%)`,  duration: 1.5},"<")
 
       let tl1 = gsap.timeline({

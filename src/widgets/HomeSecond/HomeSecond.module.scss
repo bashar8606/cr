@@ -25,15 +25,19 @@
 
 
 .line3 {
-    width: 102vh;
+    width: 85vh;
     bottom: 0;
-    transform: translateX(-56%) rotate(-61deg);
+    transform: translateX(-50%) rotate(-90deg);
     left: 50%;
     height: 2px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     clip-path: inset(0% 0% 0% 100%);
     will-change: clip-path;
+    @include lg {
+    width: 102vh;
+        transform: translateX(-56%) rotate(-61deg);
+    }
 }
 
 
